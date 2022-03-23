@@ -1,0 +1,4 @@
+Permitir selecionar as colunas que gostaria de selecionar os dados.
+dados tem que ser persistidos.
+selecionar imagens
+opção de arrastar imagens

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatizar Edição de Vídeo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preloado"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <div class="sup-container">
+    <div class="separete-buttons">
+      <button class="btn-sel-col" onclick="selectColumn()">Select Columns</button>
+      <!-- <button class="btn-sel-col" onclick="document.location.reload(true);">Reload Page</button> -->
+    </div>
+
+    <div class="container">
+
+      <section class="section-con">
+
+        <div id="container-first-table">
+          <textarea name="" id="txtarea-first-table" cols="70" rows="18"><table>
+            <thead>
+              <tr>
+                <th>Campeão</th>
+                <th>Vice</th>
+              </tr>
+            </thead>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+            </tr>
+          </table></textarea>
+          <div>
+            <button class="btn-sel-col" onclick="createFirstTable()">Create Table</button>
+          </div>
+        </div>
+
+        <div>
+          <table id="table-second"></table>
+        </div>
+
+      </section>
+
+
+
+      <section class="section-con center">
+
+        <div class="container-animation">
+
+          <div class="content-anima">
+            <div class="box-primary">
+
+              <div class="container-chanpion space-container-anima">
+                <div class="title-anim">
+                  Campeão
+                </div>
+                <div class="container-center-anima">
+                  <div class="img-container-anim wobble-hor-bottom">
+                    <img class="field-img-anim-champion img-max-size" id="id-img-anim-champion" src="imgs/corgi sitting.png">
+                  </div>
+                </div>
+                <div id="id-champion-name" class="title-anim">
+                  Campeão
+                </div>
+              </div>
+
+              <div class="container-vice space-container-anima">
+                <div class="title-anim">
+                  Vice
+                </div>
+                <div class="container-center-anima">
+                  <div class="img-container-anim wobble-hor-top">
+                    <img class="field-img-anim-vice img-max-size" id="id-img-anim-vice" src="imgs/corgi.png">
+                  </div>
+                </div>
+                <div id="id-vice-name" class="title-anim">
+                  Vice
+                </div>
+              </div>
+
+            </div>
+
+            <button class="btn-sel-col btn-animate-margin-top" onclick="animateImage()">Animate Image</button>
+
+          </div>
+        </div>
+
+
+      </section>
+      <button class="btn-sel-col" onclick="document.location.reload(true);">Reload Page</button>
+
+    </div>
+  </div>
+
+
+  <script src="scripts/utils.js"></script>
+</body>
+
+</html>
