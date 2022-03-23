@@ -106,10 +106,8 @@ const insertCheckbox = () => {
     .getElementsByTagName('td');
 
 
-  let checkInsert = '';
   const trc = document.createElement('tr');
-  trc.setAttribute('id', 'id-row-checkbox')
-  const tdhead = document.createElement('thead');
+  trc.setAttribute('id', 'id-row-checkbox');
 
   for (let i = 0; i < firstTrTd.length; i++) {
     const chk = document.createElement('input');
@@ -117,7 +115,6 @@ const insertCheckbox = () => {
     chk.setAttribute("name", `idck-${i}`);
     chk.setAttribute("id", `idck-${i}`);
     chk.setAttribute("class", "inp-chck");
-    // chk.setAttribute("onchange", `'alert("${value}");'`);
 
     const tdchk = document.createElement('th');
 
