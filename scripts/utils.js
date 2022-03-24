@@ -1,19 +1,30 @@
-
 let idChangeAnimation = null;
+let allImagesToUpdate = null;
 
 const getImage = (value, id) => {
   console.log(value.files);
   const [file] = value.files;
   const imgToInsert = document.getElementById(id);
-  
+
   // Clear text after a image is selected.
   const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
-  textSelecionaImg.innerHTML = "";
 
-  imgToInsert.height = '250';
-  imgToInsert.width = '250';
   imgToInsert.src = URL.createObjectURL(file);
-}
+
+  const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
+  
+  allImagesToUpdate[titleTxt].forEach(elementImg => {
+    elementImg['img'].src = URL.createObjectURL(file);;
+    elementImg['img'].height = '250';
+    elementImg['img'].width = '250';
+  
+    // Change the background color to identify wich field still not have a image. 
+    
+    elementImg['title'].parentElement.classList.add('with-img');
+    elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
+  });
+};
+
 
 const generateTag = (value, tag, id = '') => {
   if (tag === 'input') {
@@ -37,6 +48,10 @@ const generateTag = (value, tag, id = '') => {
     return `<${tag} for="${id}" class="label-select-image">${value}</${tag}>`;
   }
 
+  if(tag === 'td') {
+    return `<${tag} class='not-img'>${value}</${tag}>`;
+  }
+
   return `<${tag}>${value}</${tag}>`;
 };
 
@@ -57,7 +72,7 @@ const createTableSecond = (selectFields = []) => {
       thInsert += generateTag(theadTh[selectFields[i]].innerText, 'th');
     }
 
-    trBuild += generateTag(thInsert, 'tr');
+    trBuild += generateTag(generateTag(thInsert, 'tr'), 'thead');
   }
 
 
@@ -140,6 +155,7 @@ const selectColumn = () => {
 
   }
   createTableSecond(selectedCheckbox);
+  allImagesToUpdate = getImagesToUpdateImage();
 }
 
 
@@ -216,3 +232,27 @@ const changeAnimation = () => {
     }, 5000);
   }
 };
+
+
+const getImagesToUpdateImage = () => {
+  const tdWithImage = document.querySelectorAll('.td-select-image');
+
+  const allImagesAndTitle = {};
+  tdWithImage.forEach(elementTd => {
+    let titleTxt = elementTd.querySelector('.name-title-image').innerText
+    
+    if (allImagesAndTitle[titleTxt]) {
+      allImagesAndTitle[titleTxt].push({
+        title: elementTd.querySelector('.name-title-image'),
+        img: elementTd.querySelector('img'),
+      });
+    } else {
+      allImagesAndTitle[titleTxt] = [{
+        title: elementTd.querySelector('.name-title-image'),
+        img: elementTd.querySelector('img'),
+      }];
+    }
+  })
+
+  return allImagesAndTitle;
+}
