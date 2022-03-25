@@ -183,8 +183,8 @@ input, input[type="file"i] {
 }
 
 .separete-buttons {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .wobble-hor-bottom {

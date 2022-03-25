@@ -20,7 +20,7 @@ const getImage = (value, id) => {
     // Change the background color to identify which field still not have a image. 
     elementImg['title'].parentElement.classList.add('with-img');
 
-      // Clear text after a image is selected.
+    // Clear text after a image is selected.
     elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
   });
 };
@@ -170,6 +170,8 @@ const createFirstTable = () => {
 
 
   if (areaTxt && areaTxt.value && areaTxt.value.trim()) {
+    const btnHideShowFirstTable = document.getElementById('hide-table-first-id-btn');
+    btnHideShowFirstTable.style.display = 'inline-flex';
     const newAreaTxt = areaTxt.value.replace('<table', '<table id="table-first" ');
     const containerFirstTable = document.getElementById('container-first-table');
     containerFirstTable.innerHTML = newAreaTxt;
@@ -226,12 +228,12 @@ const changeAnimation = () => {
 
 
   console.log(chkInps);
-  
+
   let id = null;
   let indexImg = 0;
 
   let imgs = getNextImageRow(indexImg, rowsImage);
-  
+
   if (imgs.img && imgs.title) {
     champion.src = imgs.img[firstIndice].src;
     vice.src = imgs.img[secondIndice].src;
@@ -291,4 +293,17 @@ const getImagesToUpdateImage = () => {
 
 const selectColumnToAnimate = () => {
 
+};
+
+const hideFirstTable = () => {
+  const tblFirst = document.getElementById('table-first');
+  const btn = document.getElementById('hide-table-first-id-btn');
+  if (tblFirst.style.display === 'none') {
+    tblFirst.style.display = 'block';
+    btn.innerHTML = "Esconder Tabela Original";
+  } else {
+    tblFirst.style.display = 'none';
+    btn.innerHTML = "Mostrar Tabela Original";
+  }
+  console.log(tblFirst.style.display)
 };
