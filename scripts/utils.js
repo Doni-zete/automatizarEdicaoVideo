@@ -6,7 +6,6 @@ const getImage = (value, id) => {
   const [file] = value.files;
   const imgToInsert = document.getElementById(id);
 
-  // Clear text after a image is selected.
   const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
 
   imgToInsert.src = URL.createObjectURL(file);
@@ -18,9 +17,10 @@ const getImage = (value, id) => {
     elementImg['img'].height = '250';
     elementImg['img'].width = '250';
 
-    // Change the background color to identify wich field still not have a image. 
-
+    // Change the background color to identify which field still not have a image. 
     elementImg['title'].parentElement.classList.add('with-img');
+
+      // Clear text after a image is selected.
     elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
   });
 };
@@ -196,7 +196,7 @@ const getNextImageRow = (index, rowsImage) => {
   return { img: '', title: '' };
 }
 
-const changeAnimation = async () => {
+const changeAnimation = () => {
   const champion = document.getElementById('id-img-anim-champion');
   const vice = document.getElementById('id-img-anim-vice');
   const rowsImage = document.querySelectorAll('.tr-image');
