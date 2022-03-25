@@ -12,14 +12,14 @@ const getImage = (value, id) => {
   imgToInsert.src = URL.createObjectURL(file);
 
   const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
-  
+
   allImagesToUpdate[titleTxt].forEach(elementImg => {
     elementImg['img'].src = URL.createObjectURL(file);;
     elementImg['img'].height = '250';
     elementImg['img'].width = '250';
-  
+
     // Change the background color to identify wich field still not have a image. 
-    
+
     elementImg['title'].parentElement.classList.add('with-img');
     elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
   });
@@ -48,11 +48,11 @@ const generateTag = (value, tag, id = '') => {
     return `<${tag} for="${id}" class="label-select-image">${value}</${tag}>`;
   }
 
-  if(tag === 'td') {
+  if (tag === 'td') {
     return `<${tag} class='not-img'>${value}</${tag}>`;
   }
 
-  return `<${tag}>${value}</${tag}>`;
+  return `<${tag} ${id}>${value}</${tag}>`;
 };
 
 const createTableSecond = (selectFields = []) => {
@@ -69,10 +69,16 @@ const createTableSecond = (selectFields = []) => {
   // Used to get the Title of the selected column
   if (selectFields.length > 0) {
     for (let i = 0; i < selectFields.length; i++) {
-      thInsert += generateTag(theadTh[selectFields[i]].innerText, 'th');
+      const chkAnim = `<input type="checkbox" id="chk-anim-id-${i}">`;
+      const containerChkTitle = `
+      <label for="chk-anim-id-${i}">
+      <div class="chk-anim-selec">${chkAnim} ${theadTh[selectFields[i]].innerText}</div>
+      </label>
+      `;
+      thInsert += generateTag(containerChkTitle, 'th');
     }
 
-    trBuild += generateTag(generateTag(thInsert, 'tr'), 'thead');
+    trBuild += generateTag(generateTag(thInsert, 'tr', 'id="tr-chk-anim-thead-id"'), 'thead');
   }
 
 
@@ -184,42 +190,67 @@ const getNextImageRow = (index, rowsImage) => {
     const im = rowsImage[index].querySelectorAll('img');
     const nti = rowsImage[index].querySelectorAll('.name-title-image');
     console.log('nti', nti[0].innerText, nti[1].innerText);
-    return [...im, ...nti];
+    return { img: im, title: nti };
   }
 
-  return [];
+  return { img: '', title: '' };
 }
 
-const changeAnimation = () => {
+const changeAnimation = async () => {
   const champion = document.getElementById('id-img-anim-champion');
   const vice = document.getElementById('id-img-anim-vice');
   const rowsImage = document.querySelectorAll('.tr-image');
   const championName = document.getElementById('id-champion-name');
   const viceName = document.getElementById('id-vice-name');
+  const trChkAnim = document.getElementById('tr-chk-anim-thead-id');
+  const chkInps = trChkAnim.querySelectorAll('input');
 
+  let firstIndice = 0;
+  let secondIndice = 1;
+
+  if (chkInps.length > 1) {
+    let isMaxIndices = 0;
+    for (let i = 0; i < chkInps.length; i++) {
+      if (chkInps[i].checked) {
+        if (isMaxIndices === 0) {
+          firstIndice = i
+        } else {
+          secondIndice = i;
+          break;
+        }
+        isMaxIndices++;
+      }
+    }
+  }
+
+
+
+  console.log(chkInps);
+  
   let id = null;
   let indexImg = 0;
 
   let imgs = getNextImageRow(indexImg, rowsImage);
+  
+  if (imgs.img && imgs.title) {
+    champion.src = imgs.img[firstIndice].src;
+    vice.src = imgs.img[secondIndice].src;
 
-  if (imgs.length > 0) {
-    champion.src = imgs[0].src;
-    championName.innerHTML = imgs[2].innerText;
-    vice.src = imgs[1].src;
-    viceName.innerHTML = imgs[3].innerText;
+    championName.innerHTML = imgs.title[firstIndice].innerText;
+    viceName.innerHTML = imgs.title[secondIndice].innerText;
 
     console.log('imgs', imgs);
     indexImg++;
 
-
     idChangeAnimation = setInterval(() => {
       imgs = getNextImageRow(indexImg, rowsImage);
       console.log('imgsimgs', imgs.length);
-      if (indexImg < rowsImage.length && imgs.length > 0) {
-        champion.src = imgs[0].src;
-        championName.innerHTML = imgs[2].innerText;
-        vice.src = imgs[1].src;
-        viceName.innerHTML = imgs[3].innerText;
+      if (indexImg < rowsImage.length && imgs.img && imgs.title) {
+        champion.src = imgs.img[firstIndice].src;
+        vice.src = imgs.img[secondIndice].src;
+
+        championName.innerHTML = imgs.title[firstIndice].innerText;
+        viceName.innerHTML = imgs.title[secondIndice].innerText;
 
         console.log('imgs', imgs);
 
@@ -230,6 +261,7 @@ const changeAnimation = () => {
       }
 
     }, 5000);
+
   }
 };
 
@@ -240,7 +272,7 @@ const getImagesToUpdateImage = () => {
   const allImagesAndTitle = {};
   tdWithImage.forEach(elementTd => {
     let titleTxt = elementTd.querySelector('.name-title-image').innerText
-    
+
     if (allImagesAndTitle[titleTxt]) {
       allImagesAndTitle[titleTxt].push({
         title: elementTd.querySelector('.name-title-image'),
@@ -256,3 +288,7 @@ const getImagesToUpdateImage = () => {
 
   return allImagesAndTitle;
 }
+
+const selectColumnToAnimate = () => {
+
+};
