@@ -183,13 +183,37 @@ input, input[type="file"i] {
 }
 
 .separete-buttons {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .wobble-hor-bottom {
   animation: wobble-hor-bottom 5s both;
   animation-iteration-count: infinite;
+}
+
+.not-img {
+  background: #ffcccb;
+}
+
+.with-img {
+  background: #a3ffa8;
+}
+
+.chk-anim-selec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: red; */
+  cursor: pointer;
+  transition-property: font-size;
+  transition-duration: 0.3s;
+}
+
+.chk-anim-selec:hover {
+  font-size: 24px;
+  transition-property: font-size;
+  transition-duration: 0.4s;
 }
 
 /* ----------------------------------------------

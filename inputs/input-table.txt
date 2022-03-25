@@ -21,9 +21,9 @@
             <td align="left"><a href="/w/index.php?title=1897%E2%80%9398_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1897–98 Swiss Serie A (página não existe)">1897–98</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><span style="display:none">&amp;</span>
                 <div>—</div>
             </td>
@@ -35,8 +35,8 @@
             <td align="left"><a href="/w/index.php?title=1898%E2%80%9399_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1898–99 Swiss Serie A (página não existe)">1898–99</a>
             </td>
-            <th scope="row">Anglo-American Club <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row">Anglo-American Club <span style="font-size:85%;"></span>
+            </td>
             <td><span style="display:none">&amp;</span>
                 <div>—</div>
             </td>
@@ -48,9 +48,9 @@
             <td align="left"><a href="/w/index.php?title=1899%E2%80%931900_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1899–1900 Swiss Serie A (página não existe)">1899–1900</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/w/index.php?title=FC_Bern&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Bern (página não existe)">Bern</a>
             </td>
@@ -62,9 +62,9 @@
             <td align="left"><a href="/w/index.php?title=1900%E2%80%9301_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1900–01 Swiss Serie A (página não existe)">1900–01</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(3)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/w/index.php?title=FC_Bern&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Bern (página não existe)">Bern</a>
             </td>
@@ -76,9 +76,9 @@
             <td align="left"><a href="/w/index.php?title=1901%E2%80%9302_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1901–02 Swiss Serie A (página não existe)">1901–02</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
             </td>
             <td><a href="/w/index.php?title=FC_Bern&amp;action=edit&amp;redlink=1" class="new"
@@ -89,9 +89,9 @@
             <td align="left"><a href="/w/index.php?title=1902%E2%80%9303_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1902–03 Swiss Serie A (página não existe)">1902–03</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a>
             </td>
             <td>Neuchâtel
@@ -101,9 +101,9 @@
             <td align="left"><a href="/w/index.php?title=1903%E2%80%9304_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1903–04 Swiss Serie A (página não existe)">1903–04</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_St._Gallen" class="mw-redirect" title="FC St. Gallen">St. Gallen</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_St._Gallen" class="mw-redirect" title="FC St. Gallen">St. Gallen</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Old_Boys" title="BSC Old Boys">Old Boys</a>
             </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
@@ -113,9 +113,9 @@
             <td align="left"><a href="/w/index.php?title=1904%E2%80%9305_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1904–05 Swiss Serie A (página não existe)">1904–05</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(4)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_La_Chaux-de-Fonds" class="mw-redirect" title="FC La Chaux-de-Fonds">La
                     Chaux-de-Fonds</a>
             </td>
@@ -126,9 +126,9 @@
             <td align="left"><a href="/w/index.php?title=1905%E2%80%9306_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1905–06 Swiss Serie A (página não existe)">1905–06</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
             </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
@@ -138,9 +138,9 @@
             <td align="left"><a href="/w/index.php?title=1906%E2%80%9307_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1906–07 Swiss Serie A (página não existe)">1906–07</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/SC_Young_Fellows_Juventus" class="mw-redirect" title="SC Young Fellows Juventus">Young
                     Fellows</a>
             </td>
@@ -151,9 +151,9 @@
             <td align="left"><a href="/w/index.php?title=1907%E2%80%9308_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1907–08 Swiss Serie A (página não existe)">1907–08</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
-                    style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
             </td>
             <td><span style="display:none">&amp;</span>
@@ -164,9 +164,9 @@
             <td align="left"><a href="/w/index.php?title=1908%E2%80%9309_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1908–09 Swiss Serie A (página não existe)">1908–09</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a>
             </td>
             <td><span style="display:none">&amp;</span>
@@ -177,9 +177,9 @@
             <td align="left"><a href="/w/index.php?title=1909%E2%80%9310_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1909–10 Swiss Serie A (página não existe)">1909–10</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(3)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
             </td>
             <td><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a>
@@ -189,9 +189,9 @@
             <td align="left"><a href="/w/index.php?title=1910%E2%80%9311_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1910–11 Swiss Serie A (página não existe)">1910–11</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(4)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a>
             </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
@@ -201,9 +201,9 @@
             <td align="left"><a href="/w/index.php?title=1911%E2%80%9312_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1911–12 Swiss Serie A (página não existe)">1911–12</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Etoile-Sporting" class="mw-redirect" title="FC Etoile-Sporting">Étoile La
                     Chaux-de-Fonds</a>
             </td>
@@ -214,9 +214,9 @@
             <td align="left"><a href="/w/index.php?title=1912%E2%80%9313_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1912–13 Swiss Serie A (página não existe)">1912–13</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Lausanne-Sport" class="mw-redirect" title="FC Lausanne-Sport">Montriond
-                    Lausanne</a> <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Lausanne-Sport" class="mw-redirect" title="FC Lausanne-Sport">Montriond
+                    Lausanne</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Old_Boys" title="BSC Old Boys">Old Boys</a>
             </td>
             <td><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a>
@@ -226,9 +226,9 @@
             <td align="left"><a href="/w/index.php?title=1913%E2%80%9314_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1913–14 Swiss Serie A (página não existe)">1913–14</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a> <span
-                    style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Aarau" class="mw-redirect" title="FC Aarau">Aarau</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
             </td>
             <td>Cantonal
@@ -238,9 +238,9 @@
             <td align="left"><a href="/w/index.php?title=1914%E2%80%9315_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1914–15 Swiss Serie A (página não existe)">1914–15</a>
             </td>
-            <th scope="row"><a href="/wiki/SC_Br%C3%BChl" title="SC Brühl">Brühl</a> <span
-                    style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/SC_Br%C3%BChl" title="SC Brühl">Brühl</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
             </td>
             <td><span style="display:none">&amp;</span>
@@ -251,8 +251,8 @@
             <td align="left"><a href="/w/index.php?title=1915%E2%80%9316_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1915–16 Swiss Serie A (página não existe)">1915–16</a>
             </td>
-            <th scope="row">Cantonal <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row">Cantonal <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a>
             </td>
             <td><a href="/wiki/BSC_Old_Boys" title="BSC Old Boys">Old Boys</a>
@@ -262,9 +262,9 @@
             <td align="left"><a href="/w/index.php?title=1916%E2%80%9317_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1916–17 Swiss Serie A (página não existe)">1916–17</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
-                    style="font-size:85%;">(3)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_La_Chaux-de-Fonds" class="mw-redirect" title="FC La Chaux-de-Fonds">La
                     Chaux-de-Fonds</a>
             </td>
@@ -275,9 +275,9 @@
             <td align="left"><a href="/w/index.php?title=1917%E2%80%9318_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1917–18 Swiss Serie A (página não existe)">1917–18</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
             </td>
             <td><a href="/wiki/FC_St._Gallen" class="mw-redirect" title="FC St. Gallen">St. Gallen</a>
@@ -287,9 +287,9 @@
             <td align="left"><a href="/w/index.php?title=1918%E2%80%9319_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1918–19 Swiss Serie A (página não existe)">1918–19</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Etoile-Sporting" class="mw-redirect" title="FC Etoile-Sporting">Étoile La
-                    Chaux-de-Fonds</a> <span style="font-size:85%;">(1)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Etoile-Sporting" class="mw-redirect" title="FC Etoile-Sporting">Étoile La
+                    Chaux-de-Fonds</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
             </td>
             <td><a href="/wiki/FC_Winterthur" title="FC Winterthur">Winterthur</a>
@@ -299,9 +299,9 @@
             <td align="left"><a href="/w/index.php?title=1919%E2%80%9320_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1919–20 Swiss Serie A (página não existe)">1919–20</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(5)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
             </td>
             <td><a href="/wiki/Grasshopper_Club" class="mw-redirect" title="Grasshopper Club">Grasshopper</a>
@@ -311,9 +311,9 @@
             <td align="left"><a href="/w/index.php?title=1920%E2%80%9321_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1920–21 Swiss Serie A (página não existe)">1920–21</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(5)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
             </td>
             <td><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a>
@@ -323,28 +323,22 @@
             <td align="left"><a href="/w/index.php?title=1921%E2%80%9322_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1921–22 Swiss Serie A (página não existe)">1921–22</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(3)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/FC_Luzern" class="mw-redirect" title="FC Luzern">Luzern</a>
             </td>
             <td><a href="/wiki/FC_Blue_Stars_Z%C3%BCrich" title="FC Blue Stars Zürich">Blue Stars</a>
             </td>
         </tr>
-        <tr>
-            <td align="left"><a href="/w/index.php?title=1922%E2%80%9323_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
-                    class="new" title="1922–23 Swiss Serie A (página não existe)">1922–23</a>
-            </td>
-            <td colspan="3" align="center">Título do Campeonato não reconhecido
-            </td>
-        </tr>
+       
         <tr>
             <td align="left"><a href="/w/index.php?title=1923%E2%80%9324_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1923–24 Swiss Serie A (página não existe)">1923–24</a>
             </td>
-            <th scope="row"><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a> <span
-                    style="font-size:85%;">(2)</span>
-            </th>
+            <td scope="row"><a href="/wiki/FC_Z%C3%BCrich" class="mw-redirect" title="FC Zürich">Zürich</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/w/index.php?title=FC_Nordstern_Basel&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Nordstern Basel (página não existe)">Nordstern</a>
             </td>
@@ -355,9 +349,9 @@
             <td align="left"><a href="/w/index.php?title=1924%E2%80%9325_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1924–25 Swiss Serie A (página não existe)">1924–25</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(4)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/w/index.php?title=FC_Bern&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Bern (página não existe)">Bern</a>
             </td>
@@ -369,9 +363,9 @@
             <td align="left"><a href="/w/index.php?title=1925%E2%80%9326_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1925–26 Swiss Serie A (página não existe)">1925–26</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(5)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Grasshopper_Club" class="mw-redirect" title="Grasshopper Club">Grasshopper</a>
             </td>
             <td><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
@@ -381,9 +375,9 @@
             <td align="left"><a href="/w/index.php?title=1926%E2%80%9327_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1926–27 Swiss Serie A (página não existe)">1926–27</a>
             </td>
-            <th scope="row" style="background-color:#FFFACD"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(6)</span> †
-            </th>
+            <td scope="row" style="background-color:#FFFACD"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span> †
+            </td>
             <td><a href="/w/index.php?title=FC_Nordstern_Basel&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Nordstern Basel (página não existe)">Nordstern</a>
             </td>
@@ -394,9 +388,9 @@
             <td align="left"><a href="/w/index.php?title=1927%E2%80%9328_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1927–28 Swiss Serie A (página não existe)">1927–28</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(7)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/w/index.php?title=FC_Nordstern_Basel&amp;action=edit&amp;redlink=1" class="new"
                     title="FC Nordstern Basel (página não existe)">Nordstern</a>
             </td>
@@ -407,9 +401,9 @@
             <td align="left"><a href="/w/index.php?title=1928%E2%80%9329_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1928–29 Swiss Serie A (página não existe)">1928–29</a>
             </td>
-            <th scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
-                <span style="font-size:85%;">(6)</span>
-            </th>
+            <td scope="row"><a href="/wiki/BSC_Young_Boys" class="mw-redirect" title="BSC Young Boys">Young Boys</a>
+                <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Grasshopper_Club" class="mw-redirect" title="Grasshopper Club">Grasshopper</a>
             </td>
             <td><a href="/wiki/Urania_Gen%C3%A8ve_Sport" title="Urania Genève Sport">Urania Genève Sport</a>
@@ -419,9 +413,9 @@
             <td align="left"><a href="/w/index.php?title=1929%E2%80%9330_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1929–30 Swiss Serie A (página não existe)">1929–30</a>
             </td>
-            <th scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
-                    style="font-size:85%;">(6)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Servette_FC" class="mw-redirect" title="Servette FC">Servette</a> <span
+                    style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Grasshopper_Club" class="mw-redirect" title="Grasshopper Club">Grasshopper</a>
             </td>
             <td><a href="/wiki/FC_Biel-Bienne" class="mw-redirect" title="FC Biel-Bienne">Biel-Bienne</a>
@@ -431,9 +425,9 @@
             <td align="left"><a href="/w/index.php?title=1930%E2%80%9331_Swiss_Serie_A&amp;action=edit&amp;redlink=1"
                     class="new" title="1930–31 Swiss Serie A (página não existe)">1930–31</a>
             </td>
-            <th scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
-                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;">(8)</span>
-            </th>
+            <td scope="row"><a href="/wiki/Grasshopper_Club" class="mw-redirect"
+                    title="Grasshopper Club">Grasshopper</a> <span style="font-size:85%;"></span>
+            </td>
             <td><a href="/wiki/Urania_Gen%C3%A8ve_Sport" title="Urania Genève Sport">Urania Genève Sport</a>
             </td>
             <td><a href="/wiki/FC_La_Chaux-de-Fonds" class="mw-redirect" title="FC La Chaux-de-Fonds">La
