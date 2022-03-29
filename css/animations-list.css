@@ -1,0 +1,73 @@
+.box1-anima {
+  animation-duration: 5s;
+  animation-name: box-animate-1;
+  transform-origin: -200% -200%;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes box-animate-1 {
+  from {
+    transform: rotate(-30deg);
+  }
+
+  to {
+    /* transform: rotate(30deg); */
+    transform-origin: 100% 100%;
+  }
+}
+
+.box2-anima {
+  /* animation: box-animate-2 2s infinite alternate, box-animate-3 3s alternate infinite; */
+  /* animation: box-animate-2 2s infinite alternate; */
+
+  animation:
+    box-animate-2 .4s ease-in-out,
+    box-animate-3 1s ease-in-out alternate infinite
+    /* box-animate-4 1s infinite alternate 3s */
+    ;
+
+
+  /* box-animate-3 .5s alternate infinite ease-in-out,  */
+  /* box-animate-4 1s ease-in-out; */
+
+  /* animation-iteration-count: infinite;
+  animation-direction: alternate; */
+}
+
+.box2-jump {
+  animation:
+    box-animate-4 1s infinite alternate 3s
+    ;
+}
+
+@keyframes box-animate-2 {
+  from {
+    transform-origin: 400% 400%;
+    transform: rotate(15deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+
+
+}
+
+@keyframes box-animate-3 {
+  0% {
+    transform: rotate(20deg);
+  }
+}
+
+
+@keyframes box-animate-4 {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
