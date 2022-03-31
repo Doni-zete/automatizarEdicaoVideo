@@ -332,26 +332,27 @@
 
 @keyframes box-animate-6 {
   0% {
-    transform: rotateX(360deg);
+    transform: rotateY(720deg);
   }
 
-  90% {
-    transform: rotateX(-360deg);
-  }
-
-  91% {
-    transform-origin: center;
-    transform: rotate(0deg) translateY(0%);
-  }
-
-  92% {
+  85% {
     opacity: 1;
-    transform: rotateX(360deg);
+    transform-origin: center;
+    transform: rotateY(0deg) translateY(10%) scale3d(1, 1, 1);
+  }
+
+  86% {
+    transform: translateY(5%) scale3d(0.6, 0.6, 0.6);
+  }
+
+  87% {
+    opacity: 1;
+    transform: translateY(-10%) rotateX(360deg) scale3d(0.4, 0.4, 0.4);
   }
 
   100% {
-    opacity: 0.1;
-    transform: translateY(-100%) scale3d(0.5, 0.5, 0.5);
+    opacity: 0.2;
+    transform: translateY(-100%);
   }
 
 }
