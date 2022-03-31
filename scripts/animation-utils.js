@@ -1,4 +1,4 @@
-const MAX_ANIMATIONS = 4; // When adding or removing new animations, update the value.
+const MAX_ANIMATIONS = 6; // When adding or removing new animations, update the value.
 
 const timeCountdowns = () => {
   const timedown = document.getElementById('countdown-id');
