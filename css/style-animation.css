@@ -12,12 +12,13 @@ button {
   transition-property: padding;
   transition-duration: 0.2s;
 }
+
 button:hover {
   cursor: pointer;
   padding: 12px 14px;
 }
 
-.container {
+.container-animation-boxes {
   display: flex;
   justify-content: center;
   overflow:hidden;
