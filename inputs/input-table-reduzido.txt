@@ -13,4 +13,8 @@
     <td>A</td>
     <td>B</td>
   </tr>
+  <tr>
+    <td>C</td>
+    <td>D</td>
+  </tr>
 </table>
