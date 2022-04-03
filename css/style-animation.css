@@ -44,11 +44,11 @@ img {
 }
 
 .box1 { 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .box2 {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .box-anima-size{
