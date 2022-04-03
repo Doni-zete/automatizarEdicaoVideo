@@ -1,5 +1,5 @@
 .box-anima-1 {
-  animation: box-animate-1 6s ease-in-out both infinite;
+  animation: box-animate-1 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-1 {
@@ -62,7 +62,7 @@
 
 .box-anima-2 {
   animation:
-    box-animate-2 6s ease-in-out both infinite;
+    box-animate-2 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-2 {
@@ -127,7 +127,7 @@
 
 .box-anima-3 {
   animation:
-    box-animate-3 6s ease-in-out both infinite;
+    box-animate-3 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-3 {
@@ -191,7 +191,7 @@
 
 .box-anima-4 {
   animation:
-    box-animate-4 6s ease-in-out both infinite;
+    box-animate-4 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-4 {
@@ -257,7 +257,7 @@
 
 .box-anima-5 {
   animation:
-    box-animate-5 6s ease-in-out both infinite;
+    box-animate-5 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-5 {
@@ -327,7 +327,7 @@
 
 .box-anima-6 {
   animation:
-    box-animate-6 6s ease-in-out both infinite;
+    box-animate-6 5s ease-in-out both infinite;
 }
 
 @keyframes box-animate-6 {

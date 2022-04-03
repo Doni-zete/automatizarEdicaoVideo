@@ -103,7 +103,7 @@ input, input[type="file"i] {
     position: absolute;
     top: -50px;
     left: 0;
-  } 
+  }
 }
 
 .content-anima {
@@ -151,10 +151,14 @@ input, input[type="file"i] {
 }
 
 .container-chanpion {
+  width: 500px;
+  height: 500px;
   /* border: 1px solid blue; */
 }
 
 .container-vice {
+  width: 500px;
+  height: 500px;
   /* border: 1px solid orange; */
 }
 
@@ -188,8 +192,7 @@ input, input[type="file"i] {
   padding: 0 15px;
 }
 
-.space-container-anima {
-}
+.space-container-anima {}
 
 .td-select-image {
   padding: 15px;
@@ -238,6 +241,11 @@ input, input[type="file"i] {
   font-size: 24px;
   transition-property: font-size;
   transition-duration: 0.4s;
+}
+
+.container-btn-test-animations {
+  margin-top: 150px;
+  ;
 }
 
 /* ----------------------------------------------
