@@ -2,6 +2,11 @@ body, div, button, span, textarea {
   font-family: Roboto;
 }
 
+body {
+  min-width: 1128px;
+  overflow: auto;
+}
+
 table,
 tr,
 td,
@@ -80,9 +85,25 @@ input, input[type="file"i] {
 }
 
 .container-animation {
+  /* border: 1px solid #cecece; */
+  position: relative;
   display: flex;
   justify-content: center;
   margin-top: 200px;
+}
+
+.btn-run-animate {
+  position: absolute;
+  top: 79px;
+  left: -12px;
+}
+
+@media (max-width: 1000px) {
+  .btn-run-animate {
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
 }
 
 .content-anima {
@@ -113,24 +134,32 @@ input, input[type="file"i] {
   justify-content: center;
 }
 
+.direction-column {
+  flex-direction: column;
+}
+
 .box-primary {
   display: flex;
+  width: 1024px;
+  justify-content: space-around;
+  padding: 140px;
+
   /* border: 1px solid red; */
-  min-width: 150px;
+  min-width: 250px;
   min-height: 250px;
   margin: 5px;
 }
 
 .container-chanpion {
-  flex: 1;
+  width: 500px;
+  height: 500px;
   /* border: 1px solid blue; */
-  margin: 5px;
 }
 
 .container-vice {
-  flex: 1;
+  width: 500px;
+  height: 500px;
   /* border: 1px solid orange; */
-  margin: 5px;
 }
 
 .title-anim {
@@ -140,7 +169,7 @@ input, input[type="file"i] {
   font-family: system-ui;
   text-transform: uppercase;
 
-  
+
 }
 
 .field-img-anim-champion {}
@@ -163,9 +192,7 @@ input, input[type="file"i] {
   padding: 0 15px;
 }
 
-.space-container-anima {
-  /* margin: 0 25px; */
-}
+.space-container-anima {}
 
 .td-select-image {
   padding: 15px;
@@ -200,7 +227,7 @@ input, input[type="file"i] {
   background: #a3ffa8;
 }
 
-.chk-anim-selec{
+.chk-anim-selec {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,6 +241,11 @@ input, input[type="file"i] {
   font-size: 24px;
   transition-property: font-size;
   transition-duration: 0.4s;
+}
+
+.container-btn-test-animations {
+  margin-top: 150px;
+  ;
 }
 
 /* ----------------------------------------------

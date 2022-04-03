@@ -1,28 +1,31 @@
+const MAX_ANIMA_CLASSNAME = 6; // When adding or removing new animations, update the value.
 let idChangeAnimation = null;
 let allImagesToUpdate = null;
 
 const getImage = (value, id) => {
-  console.log(value.files);
-  const [file] = value.files;
-  const imgToInsert = document.getElementById(id);
+  if (value.files && value.files.length > 0) {
+    console.log(value.files);
+    const [file] = value.files;
+    const imgToInsert = document.getElementById(id);
 
-  const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
+    const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
 
-  imgToInsert.src = URL.createObjectURL(file);
+    imgToInsert.src = URL.createObjectURL(file);
 
-  const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
+    const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
 
-  allImagesToUpdate[titleTxt].forEach(elementImg => {
-    elementImg['img'].src = URL.createObjectURL(file);;
-    elementImg['img'].height = '250';
-    elementImg['img'].width = '250';
+    allImagesToUpdate[titleTxt].forEach(elementImg => {
+      elementImg['img'].src = URL.createObjectURL(file);
+      elementImg['img'].height = '250';
+      elementImg['img'].width = '250';
 
-    // Change the background color to identify which field still not have a image. 
-    elementImg['title'].parentElement.classList.add('with-img');
+      // Change the background color to identify which field still not have a image. 
+      elementImg['title'].parentElement.classList.add('with-img');
 
-    // Clear text after a image is selected.
-    elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
-  });
+      // Clear text after a image is selected.
+      elementImg['title'].parentElement.querySelector(`#text-select-img-${elementImg['img'].id}`).innerHTML = "";
+    });
+  }
 };
 
 
@@ -78,7 +81,7 @@ const createTableSecond = (selectFields = []) => {
       thInsert += generateTag(containerChkTitle, 'th');
     }
 
-    trBuild += generateTag(generateTag(thInsert, 'tr', 'id="tr-chk-anim-thead-id"'), 'thead');
+    trBuild += generateTag(generateTag(thInsert, 'tr', 'id="id-tr-chk-anim-thead"'), 'thead');
   }
 
 
@@ -184,27 +187,91 @@ const animateImage = () => {
   if (idChangeAnimation) {
     clearInterval(idChangeAnimation);
   }
+
   changeAnimation();
 }
 
-const getNextImageRow = (index, rowsImage) => {
-  if (rowsImage[index]) {
-    const im = rowsImage[index].querySelectorAll('img');
-    const nti = rowsImage[index].querySelectorAll('.name-title-image');
-    console.log('nti', nti[0].innerText, nti[1].innerText);
-    return { img: im, title: nti };
+const genarateBoxClassnameAnimation = () => {
+  let box1Number = 0;
+  let box2Number = 0;
+
+  while (box1Number === 0 || box2Number === 0) {
+    const randNumber = Math.floor(Math.random() * 6) + 1;
+    if (box1Number === 0) {
+      box1Number = randNumber;
+    } else if (box1Number !== randNumber) {
+      box2Number = randNumber;
+    }
   }
 
-  return { img: '', title: '' };
+  return { classChampion: `box-anima-${box1Number}`, classVice: `box-anima-${box2Number}` }
 }
 
-const changeAnimation = () => {
-  const champion = document.getElementById('id-img-anim-champion');
-  const vice = document.getElementById('id-img-anim-vice');
+const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
+  const im = rowImage.querySelectorAll('img');
+  const nti = rowImage.querySelectorAll('.name-title-image');
+
+  const championImageSrc = im[firstIndice].src;
+  const viceImageSrc = im[secondIndice].src;
+
+  const championName = nti[firstIndice].innerText;
+  const viceName = nti[secondIndice].innerText;
+
+  const boxesClassname = genarateBoxClassnameAnimation();
+  
+  console.log('boxesClassname', boxesClassname);
+
+  const buildingTags = `
+  <div class="box-primary">
+
+  <div class="container-chanpion space-container-anima">
+    <div class="title-anim">
+      Campeão
+    </div>
+
+    <div class="box1 box-size">
+      <div id="box1-id" class="${boxesClassname.classChampion} box-anima-size">
+        <img src="${championImageSrc}" id="id-img-anim-champion">
+      </div>
+    </div>
+
+
+    <div id="id-champion-name" class="title-anim">
+      ${championName}
+    </div>
+  </div>
+
+  <div class="container-vice space-container-anima">
+    <div class="title-anim">
+      Vice
+    </div>
+
+    <div class="box2 box-size">
+      <div id="box2-id" class="${boxesClassname.classVice} box-anima-size">
+        <img src="${viceImageSrc}" id="id-img-anim-vice">
+      </div>
+    </div>
+
+    <div id="id-vice-name" class="title-anim">
+      ${viceName}
+    </div>
+  </div>
+
+</div>  
+  `;
+
+  return buildingTags;
+}
+
+const getImagesRowWithAnimation = () => {
+  const buildSectionChampionVice = [];
+
+  // Get all the rows from the table with images
   const rowsImage = document.querySelectorAll('.tr-image');
-  const championName = document.getElementById('id-champion-name');
-  const viceName = document.getElementById('id-vice-name');
-  const trChkAnim = document.getElementById('tr-chk-anim-thead-id');
+
+
+  // The selected checkbox columns to animate
+  const trChkAnim = document.getElementById('id-tr-chk-anim-thead');
   const chkInps = trChkAnim.querySelectorAll('input');
 
   let firstIndice = 0;
@@ -226,36 +293,31 @@ const changeAnimation = () => {
   }
 
 
+  for (let i = 0; i < rowsImage.length; i++) {
+    if (rowsImage[i]) {
+      const championVice = buildTagsToAnimate(rowsImage[i], firstIndice, secondIndice);
+      buildSectionChampionVice.push({ championVice });
+    }
+  }
 
-  console.log(chkInps);
+  return buildSectionChampionVice;
+}
 
-  let id = null;
+const changeAnimation = () => {
+  const contentAnima = document.getElementById('id-content-anima');
+
   let indexImg = 0;
 
-  let imgs = getNextImageRow(indexImg, rowsImage);
+  let rowsTagsWithAnimation = getImagesRowWithAnimation();
+  console.log('rowsTagsWithAnimation', rowsTagsWithAnimation);
 
-  if (imgs.img && imgs.title) {
-    champion.src = imgs.img[firstIndice].src;
-    vice.src = imgs.img[secondIndice].src;
-
-    championName.innerHTML = imgs.title[firstIndice].innerText;
-    viceName.innerHTML = imgs.title[secondIndice].innerText;
-
-    console.log('imgs', imgs);
+  if (rowsTagsWithAnimation.length > 0) {
+    contentAnima.innerHTML = rowsTagsWithAnimation[indexImg].championVice;
     indexImg++;
 
     idChangeAnimation = setInterval(() => {
-      imgs = getNextImageRow(indexImg, rowsImage);
-      console.log('imgsimgs', imgs.length);
-      if (indexImg < rowsImage.length && imgs.img && imgs.title) {
-        champion.src = imgs.img[firstIndice].src;
-        vice.src = imgs.img[secondIndice].src;
-
-        championName.innerHTML = imgs.title[firstIndice].innerText;
-        viceName.innerHTML = imgs.title[secondIndice].innerText;
-
-        console.log('imgs', imgs);
-
+      if (indexImg < rowsTagsWithAnimation.length) {
+        contentAnima.innerHTML = rowsTagsWithAnimation[indexImg].championVice;
         indexImg++;
       } else {
         clearInterval(idChangeAnimation);

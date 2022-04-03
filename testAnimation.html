@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="css/style-animation.css">
+  <link rel="stylesheet" href="css/animations-list.css">
+
+  <title>TestAnimation</title>
+</head>
+
+<body>
+  <button onclick="window.location.reload(true)">RELOAD</button>
+  <button onclick="boxNextAnimation('box1')">Box1 next Animation</button>
+  <button onclick="boxNextAnimation('box2')">Box2 next Animation</button>
+
+  <div>
+    <div id="current-classname-box1-id">Box1</div>
+    <div id="current-classname-box2-id">Box2</div>
+  </div>
+
+
+  <div class="container-animation-boxes">
+    <div id="countdown-id">0</div>
+  </div>
+  <div class="container-animation-boxes">
+
+    <div id="container-horizontal-id" class="container-horizontal">
+
+
+      <div class="box1 box-size">
+        <div id="box1-id" class="box-anima-1 box-anima-size">
+          <img src="imgs/cat-2191178__340.webp">
+        </div>
+      </div>
+
+      <div class="box2 box-size">
+        <div id="box2-id" class="box-anima-6 box-anima-size">
+          <img src="imgs/tiger-528890__340.webp">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="scripts/animation-utils.js"></script>
+</body>
+
+</html>

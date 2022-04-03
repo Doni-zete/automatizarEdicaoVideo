@@ -14,6 +14,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
+  <link rel="stylesheet" href="css/style-animation.css">
+  <link rel="stylesheet" href="css/animations-list.css">
+
 </head>
 
 <body>
@@ -21,7 +24,8 @@
   <div class="sup-container">
     <div class="separete-buttons">
       <button class="btn-sel-col" onclick="selectColumn()">Select Columns</button>
-      <button id="hide-table-first-id-btn"class="btn-sel-col" style="display: none;" onclick="hideFirstTable()">Esconder Tabela Original</button>
+      <button id="hide-table-first-id-btn" class="btn-sel-col" style="display: none;"
+        onclick="hideFirstTable()">Esconder Tabela Original</button>
       <!-- <button class="btn-sel-col" onclick="document.location.reload(true);">Reload Page</button> -->
     </div>
 
@@ -44,24 +48,33 @@
 
 
 
-      <section class="section-con center">
+      <section class="section-con center direction-column">
 
         <div class="container-animation">
 
-          <div class="content-anima">
+          <div id="id-content-anima" class="content-anima">
             <div class="box-primary">
 
               <div class="container-chanpion space-container-anima">
                 <div class="title-anim">
                   Campeão
                 </div>
-                <div class="container-center-anima">
-                  <div class="img-container-anim wobble-hor-bottom">
-                    <img class="field-img-anim-champion img-max-size" id="id-img-anim-champion" src="imgs/corgi sitting.png">
+
+                <div class="box1 box-size">
+                  <div id="box1-id" class="box-anima-1 box-anima-size">
+                    <img src="imgs/cat-2191178__340.webp" id="id-img-anim-champion">
                   </div>
                 </div>
+
+                <!-- <div class="container-center-anima">
+                  <div class="img-container-anim wobble-hor-bottom">
+                    <img class="field-img-anim-champion img-max-size" id="id-img-anim-champion"
+                      src="imgs/corgi sitting.png">
+                  </div>
+                </div> -->
+
                 <div id="id-champion-name" class="title-anim">
-                  Campeão
+                  Campeão CampeãoCampeão Campeão
                 </div>
               </div>
 
@@ -69,11 +82,19 @@
                 <div class="title-anim">
                   Vice
                 </div>
-                <div class="container-center-anima">
+
+                <div class="box2 box-size">
+                  <div id="box2-id" class="box-anima-6 box-anima-size">
+                    <img src="imgs/tiger-528890__340.webp" id="id-img-anim-vice">
+                  </div>
+                </div>
+
+                <!-- <div class="container-center-anima">
                   <div class="img-container-anim wobble-hor-top">
                     <img class="field-img-anim-vice img-max-size" id="id-img-anim-vice" src="imgs/corgi.png">
                   </div>
-                </div>
+                </div> -->
+
                 <div id="id-vice-name" class="title-anim">
                   Vice
                 </div>
@@ -81,12 +102,22 @@
 
             </div>
 
-            <button class="btn-sel-col btn-animate-margin-top" onclick="animateImage()">Animate Image</button>
-
           </div>
+          <button class="btn-sel-col btn-run-animate" onclick="animateImage()">Animate Image</button>
         </div>
 
+        <div class="container-btn-test-animations">
+          <button onclick="boxNextAnimation('box1')">Box1 next Animation</button>
+          <button onclick="boxNextAnimation('box2')">Box2 next Animation</button>
+        </div>
+        <div>
+          <div id="current-classname-box1-id">Box1</div>
+          <div id="current-classname-box2-id">Box2</div>
+        </div>
 
+        <div class="container-animation-boxes">
+          <div id="countdown-id">0</div>
+        </div>
       </section>
       <button class="btn-sel-col" onclick="document.location.reload(true);">Reload Page</button>
 
@@ -95,6 +126,8 @@
 
 
   <script src="scripts/utils.js"></script>
+  <!-- <script src="scripts/animation-utils.js"></script> -->
+
 </body>
 
 </html>
