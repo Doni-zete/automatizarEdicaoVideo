@@ -183,12 +183,33 @@ const createFirstTable = () => {
   }
 };
 
+
+const hideShowButton = (isToHide = true) => {
+  const btnRunAnimation = document.querySelector('.btn-run-animate');
+  let countHide = 3;
+  if (isToHide) {
+    const idBtenShowHide = setInterval(() => {
+      btnRunAnimation.innerHTML = `Hide in: ${countHide}`
+
+      if (countHide === 0) {
+        clearInterval(idBtenShowHide);
+        btnRunAnimation.style.display = 'none';
+        changeAnimation();
+      }
+      countHide--;
+    }, 3000);
+  } else {
+    btnRunAnimation.innerHTML = "Animate Image";
+    btnRunAnimation.style.display = 'block';
+  }
+};
+
 const animateImage = () => {
   if (idChangeAnimation) {
     clearInterval(idChangeAnimation);
   }
 
-  changeAnimation();
+  hideShowButton();
 }
 
 const genarateBoxClassnameAnimation = () => {
@@ -218,7 +239,7 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
   const viceName = nti[secondIndice].innerText;
 
   const boxesClassname = genarateBoxClassnameAnimation();
-  
+
   console.log('boxesClassname', boxesClassname);
 
   const buildingTags = `
@@ -322,6 +343,7 @@ const changeAnimation = () => {
       } else {
         clearInterval(idChangeAnimation);
         console.log("Finished Animation Change images");
+        hideShowButton(false);
       }
 
     }, 5000);
