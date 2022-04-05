@@ -189,11 +189,11 @@ const hideShowButton = (isToHide = true) => {
   let countHide = 3;
   if (isToHide) {
     const idBtenShowHide = setInterval(() => {
-      btnRunAnimation.innerHTML = `Hide in: ${countHide}`
+      btnRunAnimation.innerHTML = `Hide in: ${countHide}`;
 
       if (countHide === 0) {
-        clearInterval(idBtenShowHide);
         btnRunAnimation.style.display = 'none';
+        clearInterval(idBtenShowHide);
         changeAnimation();
       }
       countHide--;
@@ -343,6 +343,7 @@ const changeAnimation = () => {
       } else {
         clearInterval(idChangeAnimation);
         console.log("Finished Animation Change images");
+        contentAnima.innerHTML = "Finished Animation";
         hideShowButton(false);
       }
 
