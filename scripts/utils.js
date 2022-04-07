@@ -212,13 +212,21 @@ const hideShowButton = (isToHide = true) => {
   }
 };
 
-const animateImage = () => {
+const resetToInitialValues = () => {
+  const contentAnimaId = document.getElementById('id-content-anima');
+
   if (idChangeAnimation) {
     clearInterval(idChangeAnimation);
   }
   if (idBtenShowHide) {
     clearInterval(idBtenShowHide);
   }
+
+  contentAnimaId.classList.remove('border-none');
+}
+
+const animateImage = () => {
+  resetToInitialValues();
 
   hideShowButton();
 }
