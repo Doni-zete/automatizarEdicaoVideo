@@ -1,9 +1,7 @@
 body, div, button, span, textarea {
   font-family: Roboto;
 }
-html {
-  overflow-x: hidden;
-}
+
 
 body {
   min-width: 1128px;
@@ -60,6 +58,19 @@ th {
   display: flex;
 }
 
+.section-animate {
+  width: 100%;
+  overflow: hidden;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.border-none {
+  border: none !important;
+}
+
 .btn-sel-col {
   padding: 12px;
   margin-bottom: 10px;
@@ -95,14 +106,10 @@ input, input[type="file"i] {
   margin-top: 200px;
 }
 
-.btn-run-animate {
-  position: absolute;
-  top: 359px;
-  left: 78px;
-}
+.btn-run-animate {}
 
 .content-anima {
-  /* border: 2px dotted #CDCDCD; */
+  border: 2px dotted #CDCDCD;
   min-width: 930px;
   min-height: 700px;
 }
@@ -135,9 +142,7 @@ input, input[type="file"i] {
 
 .box-primary {
   display: flex;
-  width: 1024px;
-  justify-content: space-around;
-  padding: 140px;
+  justify-content: space-between;
 
   /* border: 1px solid red; */
   min-width: 250px;
@@ -163,8 +168,6 @@ input, input[type="file"i] {
   text-align: center;
   font-family: system-ui;
   text-transform: uppercase;
-
-
 }
 
 .field-img-anim-champion {}

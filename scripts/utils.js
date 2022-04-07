@@ -1,5 +1,6 @@
 const MAX_ANIMA_CLASSNAME = 6; // When adding or removing new animations, update the value.
 let idChangeAnimation = null;
+let idBtenShowHide = null;
 let allImagesToUpdate = null;
 
 const getImage = (value, id) => {
@@ -186,27 +187,37 @@ const createFirstTable = () => {
 
 const hideShowButton = (isToHide = true) => {
   const btnRunAnimation = document.querySelector('.btn-run-animate');
+  const contentAnimaId = document.getElementById('id-content-anima');
   let countHide = 3;
-  if (isToHide) {
-    const idBtenShowHide = setInterval(() => {
-      btnRunAnimation.innerHTML = `Hide in: ${countHide}`;
 
+  if (isToHide) {
+    idBtenShowHide = setInterval(() => {
+      btnRunAnimation.innerHTML = `Hide in: ${countHide}`;
+      contentAnimaId.innerHTML = `<div class="display-flex center">${countHide}</div>`;
       if (countHide === 0) {
-        btnRunAnimation.style.display = 'none';
+        contentAnimaId.classList.remove('content-anima');
+        contentAnimaId.classList.add('border-none', 'content-anima');
         clearInterval(idBtenShowHide);
         changeAnimation();
+        btnRunAnimation.innerHTML = "Animate Image";
+        console.log('countHide', countHide);
+      } else if (countHide < 0) {
+        clearInterval(idBtenShowHide);
+      } else {
+        countHide--;
       }
-      countHide--;
     }, 3000);
   } else {
     btnRunAnimation.innerHTML = "Animate Image";
-    btnRunAnimation.style.display = 'block';
   }
 };
 
 const animateImage = () => {
   if (idChangeAnimation) {
     clearInterval(idChangeAnimation);
+  }
+  if (idBtenShowHide) {
+    clearInterval(idBtenShowHide);
   }
 
   hideShowButton();
@@ -287,38 +298,43 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
 const getImagesRowWithAnimation = () => {
   const buildSectionChampionVice = [];
 
-  // Get all the rows from the table with images
-  const rowsImage = document.querySelectorAll('.tr-image');
+  try {
+    // Get all the rows from the table with images
+    const rowsImage = document.querySelectorAll('.tr-image');
 
 
-  // The selected checkbox columns to animate
-  const trChkAnim = document.getElementById('id-tr-chk-anim-thead');
-  const chkInps = trChkAnim.querySelectorAll('input');
+    // The selected checkbox columns to animate
+    const trChkAnim = document.getElementById('id-tr-chk-anim-thead');
+    const chkInps = trChkAnim.querySelectorAll('input');
 
-  let firstIndice = 0;
-  let secondIndice = 1;
+    let firstIndice = 0;
+    let secondIndice = 1;
 
-  if (chkInps.length > 1) {
-    let isMaxIndices = 0;
-    for (let i = 0; i < chkInps.length; i++) {
-      if (chkInps[i].checked) {
-        if (isMaxIndices === 0) {
-          firstIndice = i
-        } else {
-          secondIndice = i;
-          break;
+    if (chkInps && chkInps.length > 1) {
+      let isMaxIndices = 0;
+      for (let i = 0; i < chkInps.length; i++) {
+        if (chkInps[i].checked) {
+          if (isMaxIndices === 0) {
+            firstIndice = i
+          } else {
+            secondIndice = i;
+            break;
+          }
+          isMaxIndices++;
         }
-        isMaxIndices++;
       }
     }
-  }
 
 
-  for (let i = 0; i < rowsImage.length; i++) {
-    if (rowsImage[i]) {
-      const championVice = buildTagsToAnimate(rowsImage[i], firstIndice, secondIndice);
-      buildSectionChampionVice.push({ championVice });
+    for (let i = 0; i < rowsImage.length; i++) {
+      if (rowsImage[i]) {
+        const championVice = buildTagsToAnimate(rowsImage[i], firstIndice, secondIndice);
+        buildSectionChampionVice.push({ championVice });
+      }
     }
+  } catch (err) {
+    console.log(err);
+    alert("Make sure the TABLE data is populated.")
   }
 
   return buildSectionChampionVice;
@@ -343,7 +359,8 @@ const changeAnimation = () => {
       } else {
         clearInterval(idChangeAnimation);
         console.log("Finished Animation Change images");
-        contentAnima.innerHTML = "Finished Animation";
+        contentAnima.classList.remove('border-none');
+        contentAnima.innerHTML = `<div class="display-flex center">Finished Animation</div>`;
         hideShowButton(false);
       }
 
