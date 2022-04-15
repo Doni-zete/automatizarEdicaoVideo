@@ -102,7 +102,15 @@ const createTableSecond = (selectFields = []) => {
       const imgInsert = generateTag(countId, 'img');
       const textSelectImage = `<span class="text-seleciona-image-span" id="text-select-img-id-${countId}">Selecione imagem</span>`;
       if (selectFields.length > 0 && td[selectFields[j]]) {
-        const nameTitleImage = `<div class="name-title-image">${td[selectFields[j]].innerText}</div>`;
+        const nameTitleImage = `<div class="name-title-image container-center-pencil-icon">
+        <div id="id-title-select-${countId}" class="title-select-edit-change">${td[selectFields[j]].innerText}</div>
+        <input id="id-title-edit-${countId}" style="font-size: 32px; display: none;" class="input-edit-pencil" type="text" value="${td[selectFields[j]].innerText}" />
+
+        <button class="pencil-icon" onclick="onEditTitle(this, ${countId})" id="id-btn-edit-${countId}">
+        <i id="id-pencil-edit-${countId}" class="fa fa-pencil"></i>
+        <i style="display: none;" id="id-confirm-thumbs-edit-${countId}" class="fa fa-thumbs-up"></i>
+        </button>
+        </div>`;
         const continerInsideElements = `<div class="container-inside-elements">${textSelectImage} ${imgInsert} ${inputInsert}</div>`;
         const mergeTagsIntoDiv =
           `<div class="td-select-image">${`${nameTitleImage} ${continerInsideElements}`}</div>`;
@@ -416,4 +424,61 @@ const hideFirstTable = () => {
     btn.innerHTML = "Mostrar Tabela Original";
   }
   console.log(tblFirst.style.display)
+};
+
+const onEditTitle = (element, currentCount) => {
+  console.log(element);
+  console.log('currentCount', currentCount);
+  if (element) {
+    const selectTitleEdit = document.getElementById(`id-title-select-${currentCount}`);
+    const inputTitleEdit = document.getElementById(`id-title-edit-${currentCount}`);
+
+    const isEditing = (element.getAttribute("isediting") === 'true' ? true : false);
+    console.log('isEditing', isEditing);
+
+    const icons = element.querySelectorAll('i');
+    const iconPencil = icons[0];
+    const iconConfirm = icons[1];
+
+    // Close edit mode
+    if (isEditing) {
+      handleConfirmChangeAllTitlesText(inputTitleEdit, selectTitleEdit);
+
+      element.setAttribute("isediting", false);
+
+      inputTitleEdit.style.display = "none";
+      selectTitleEdit.style.display = "block";
+
+      iconPencil.style.display = "block";
+      iconConfirm.style.display = "none";
+
+      // Open edit mode
+    } else {
+      element.setAttribute("isediting", true);
+
+      inputTitleEdit.style.display = "block";
+      selectTitleEdit.style.display = "none";
+
+      iconPencil.style.display = "none";
+      iconConfirm.style.display = "block";
+    }
+  }
+
+};
+
+const handleConfirmChangeAllTitlesText = (inputField, selectTitleEdit, isToChangeTitles = false) => {
+  const titleSelectEditChange = document.getElementsByClassName('title-select-edit-change');
+
+  const inputFieldStr = inputField.value;
+  const selectTitleEditStr = selectTitleEdit.innerHTML;
+
+  for (let i = 0; i < titleSelectEditChange.length; i++) {
+    const strTitle = titleSelectEditChange[i].innerHTML;
+    console.log('strTitle', strTitle);
+    if (strTitle.trim().toLowerCase() === selectTitleEditStr.trim().toLowerCase()) {
+      titleSelectEditChange[i].innerHTML = inputFieldStr;
+      const inputUpdateValue = titleSelectEditChange[i].parentElement.querySelector('input');
+      inputUpdateValue.setAttribute('value', inputFieldStr);
+    }
+  }
 };

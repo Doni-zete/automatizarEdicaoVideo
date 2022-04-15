@@ -243,7 +243,19 @@ input, input[type="file"i] {
 
 .container-btn-test-animations {
   margin-top: 150px;
-  ;
+}
+
+.container-center-pencil-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pencil-icon {
+  font-size:24px
+}
+
+.input-edit-pencil{
+  cursor: text;
 }
 
 /* ----------------------------------------------
