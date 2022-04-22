@@ -284,7 +284,7 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
     </div>
 
 
-    <div id="id-champion-name" class="title-anim">
+    <div id="id-champion-name" class="title-anim team-name-margin-top">
       ${championName}
     </div>
   </div>
@@ -300,7 +300,7 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
       </div>
     </div>
 
-    <div id="id-vice-name" class="title-anim">
+    <div id="id-vice-name" class="title-anim team-name-margin-top">
       ${viceName}
     </div>
   </div>
