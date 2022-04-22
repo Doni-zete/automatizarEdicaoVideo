@@ -200,7 +200,7 @@ const hideShowButton = (isToHide = true) => {
 
   if (isToHide) {
     idBtenShowHide = setInterval(() => {
-      btnRunAnimation.innerHTML = `Hide in: ${countHide}`;
+      btnRunAnimation.innerHTML = `Wait: ${countHide}`;
       contentAnimaId.innerHTML = `<div class="display-flex center">${countHide}</div>`;
       if (countHide === 0) {
         contentAnimaId.classList.remove('content-anima');
