@@ -112,6 +112,7 @@ input, input[type="file"i] {
   border: 2px dotted #CDCDCD;
   min-width: 930px;
   min-height: 700px;
+  /* background: lightskyblue; */
 }
 
 .name-title-image {
@@ -147,19 +148,26 @@ input, input[type="file"i] {
   /* border: 1px solid red; */
   min-width: 250px;
   min-height: 250px;
-  margin: 5px;
+  /* margin: 5px; */
+  height: 100%;
+
+  /* background: red; */
 }
 
 .container-chanpion {
   width: 500px;
-  height: 500px;
+  height: 100%;
   /* border: 1px solid blue; */
 }
 
 .container-vice {
   width: 500px;
-  height: 500px;
+  height: 100%;
   /* border: 1px solid orange; */
+}
+
+.team-name-margin-top {
+  margin-top: 44px;
 }
 
 .title-anim {
