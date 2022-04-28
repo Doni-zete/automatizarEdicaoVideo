@@ -1,10 +1,14 @@
 const MAX_ANIMA_CLASSNAME = 6; // When adding or removing new animations, update the value.
 let idChangeAnimation = null;
 let idBtenShowHide = null;
-let allImagesToUpdate = null;
 
 const getImage = (value, id) => {
+  console.log(value, id);
   if (value.files && value.files.length > 0) {
+
+    // Everytime a new image is selected it will read all the images again
+    const allImagesToUpdate = getImagesToUpdateImage();
+
     console.log(value.files);
     const [file] = value.files;
     const imgToInsert = document.getElementById(id);
@@ -19,6 +23,7 @@ const getImage = (value, id) => {
       elementImg['img'].src = URL.createObjectURL(file);
       elementImg['img'].height = '250';
       elementImg['img'].width = '250';
+      elementImg['img'].removeAttribute("style");
 
       // Change the background color to identify which field still not have a image. 
       elementImg['title'].parentElement.classList.add('with-img');
@@ -45,7 +50,7 @@ const generateTag = (value, tag, id = '') => {
   }
 
   if (tag === 'img') {
-    return `<img id='id-${value}' src='#''>`;
+    return `<img id='id-${value}' src='imgs/imagnotfound.png' style="display:block;width: 26px; height: 26px;">`;
   }
 
   if (tag === 'label') {
@@ -102,7 +107,15 @@ const createTableSecond = (selectFields = []) => {
       const imgInsert = generateTag(countId, 'img');
       const textSelectImage = `<span class="text-seleciona-image-span" id="text-select-img-id-${countId}">Selecione imagem</span>`;
       if (selectFields.length > 0 && td[selectFields[j]]) {
-        const nameTitleImage = `<div class="name-title-image">${td[selectFields[j]].innerText}</div>`;
+        const nameTitleImage = `<div class="name-title-image container-center-pencil-icon">
+        <div id="id-title-select-${countId}" class="title-select-edit-change">${td[selectFields[j]].innerText}</div>
+        <input onkeypress="confirmWithEnter(event, this)" id="id-title-edit-${countId}" style="font-size: 32px; display: none;" class="input-edit-pencil" type="text" value="${td[selectFields[j]].innerText}" />
+
+        <button class="pencil-icon" onclick="onEditTitle(this, ${countId})" id="id-btn-edit-${countId}">
+        <i id="id-pencil-edit-${countId}" class="fa fa-pencil"></i>
+        <i style="display: none;" id="id-confirm-thumbs-edit-${countId}" class="fa fa-thumbs-up"></i>
+        </button>
+        </div>`;
         const continerInsideElements = `<div class="container-inside-elements">${textSelectImage} ${imgInsert} ${inputInsert}</div>`;
         const mergeTagsIntoDiv =
           `<div class="td-select-image">${`${nameTitleImage} ${continerInsideElements}`}</div>`;
@@ -136,15 +149,23 @@ const insertCheckbox = () => {
 
   for (let i = 0; i < firstTrTd.length; i++) {
     const chk = document.createElement('input');
+    const labelChk = document.createElement('label');
+    const divLabel = document.createElement('div');
+
     chk.setAttribute("type", "checkbox");
     chk.setAttribute("name", `idck-${i}`);
     chk.setAttribute("id", `idck-${i}`);
     chk.setAttribute("class", "inp-chck");
 
-    const tdchk = document.createElement('th');
+    const thchk = document.createElement('th');
+    labelChk.setAttribute("for", `idck-${i}`);
 
-    tdchk.append(chk);
-    trc.append(tdchk);
+    divLabel.setAttribute("class", "chk-anim-selec");
+
+    divLabel.append(chk)
+    labelChk.append(divLabel)
+    thchk.append(labelChk);
+    trc.append(thchk);
   }
 
   const theadtable = table.getElementsByTagName('thead');
@@ -165,7 +186,6 @@ const selectColumn = () => {
 
   }
   createTableSecond(selectedCheckbox);
-  allImagesToUpdate = getImagesToUpdateImage();
 }
 
 
@@ -179,7 +199,7 @@ const createFirstTable = () => {
     const newAreaTxt = areaTxt.value.replace('<table', '<table id="table-first" ');
     const containerFirstTable = document.getElementById('container-first-table');
     containerFirstTable.innerHTML = newAreaTxt;
-    
+
     // Used to show the button to reverse the rows when there is a table
     const showReverseButton = document.getElementById('reverse-rows-table-first-id-btn');
     showReverseButton.style.display = "inline-flex";
@@ -196,7 +216,7 @@ const hideShowButton = (isToHide = true) => {
 
   if (isToHide) {
     idBtenShowHide = setInterval(() => {
-      btnRunAnimation.innerHTML = `Hide in: ${countHide}`;
+      btnRunAnimation.innerHTML = `Wait: ${countHide}`;
       contentAnimaId.innerHTML = `<div class="display-flex center">${countHide}</div>`;
       if (countHide === 0) {
         contentAnimaId.classList.remove('content-anima');
@@ -280,7 +300,7 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
     </div>
 
 
-    <div id="id-champion-name" class="title-anim">
+    <div id="id-champion-name" class="title-anim team-name-margin-top">
       ${championName}
     </div>
   </div>
@@ -296,7 +316,7 @@ const buildTagsToAnimate = (rowImage, firstIndice, secondIndice) => {
       </div>
     </div>
 
-    <div id="id-vice-name" class="title-anim">
+    <div id="id-vice-name" class="title-anim team-name-margin-top">
       ${viceName}
     </div>
   </div>
@@ -414,12 +434,65 @@ const hideFirstTable = () => {
   const btn = document.getElementById('hide-table-first-id-btn');
   if (tblFirst.style.display === 'none') {
     tblFirst.style.display = 'block';
-    btn.innerHTML = "Esconder Tabela Original";
+    btn.innerHTML = "Hide Original Table";
   } else {
     tblFirst.style.display = 'none';
-    btn.innerHTML = "Mostrar Tabela Original";
+    btn.innerHTML = "Show Original Table";
   }
   console.log(tblFirst.style.display)
+};
+
+const onEditTitle = (element, currentCount) => {
+  if (element) {
+    const selectTitleEdit = document.getElementById(`id-title-select-${currentCount}`);
+    const inputTitleEdit = document.getElementById(`id-title-edit-${currentCount}`);
+
+    const isEditing = (element.getAttribute("isediting") === 'true' ? true : false);
+
+    const icons = element.querySelectorAll('i');
+    const iconPencil = icons[0];
+    const iconConfirm = icons[1];
+
+    // Close edit mode
+    if (isEditing) {
+      handleConfirmChangeAllTitlesText(inputTitleEdit, selectTitleEdit);
+
+      element.setAttribute("isediting", false);
+
+      inputTitleEdit.style.display = "none";
+      selectTitleEdit.style.display = "block";
+
+      iconPencil.style.display = "block";
+      iconConfirm.style.display = "none";
+
+      // Open edit mode
+    } else {
+      element.setAttribute("isediting", true);
+
+      inputTitleEdit.style.display = "block";
+      selectTitleEdit.style.display = "none";
+
+      iconPencil.style.display = "none";
+      iconConfirm.style.display = "block";
+    }
+  }
+
+};
+
+const handleConfirmChangeAllTitlesText = (inputField, selectTitleEdit) => {
+  const titleSelectEditChange = document.getElementsByClassName('title-select-edit-change');
+
+  const inputFieldStr = inputField.value;
+  const selectTitleEditStr = selectTitleEdit.innerText;
+
+  for (let i = 0; i < titleSelectEditChange.length; i++) {
+    const strTitle = titleSelectEditChange[i].innerText;
+    if (strTitle.trim().toLowerCase() === selectTitleEditStr.trim().toLowerCase()) {
+      titleSelectEditChange[i].innerText = inputFieldStr;
+      const inputUpdateValue = titleSelectEditChange[i].parentElement.querySelector('input');
+      inputUpdateValue.setAttribute('value', inputFieldStr);
+    }
+  }
 };
 
 const reverRowsTable = () => {
@@ -427,12 +500,20 @@ const reverRowsTable = () => {
 
   const tb = t.querySelector('tbody');
   const tr = tb.getElementsByTagName('tr');
-  const atr = [];
+  const arrtr = [];
   for (i = 0; i < tr.length; i++) {
-    atr.push(`<tr>${tr[i].innerHTML}</tr>`);
+    arrtr.push(`<tr>${tr[i].innerHTML}</tr>`);
   }
 
-  const reveratr = atr.reverse();
+  const revertArrtr = arrtr.reverse();
 
-  tb.innerHTML = reveratr.join(" ");
+  tb.innerHTML = revertArrtr.join(" ");
 }
+
+const confirmWithEnter = (keypressed, element) => {
+  console.log(keypressed, element);
+    if (keypressed.key === "Enter") {
+      console.log("Enter Pressed!");
+      element.parentElement.querySelector("button").click();
+    }
+};

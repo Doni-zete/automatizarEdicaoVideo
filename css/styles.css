@@ -33,13 +33,13 @@ table {
 .text-seleciona-image-span {
   font-size: 16px;
   transition-property: font-size;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
 .text-seleciona-image-span:hover {
   font-size: 24px;
   transition-property: font-size;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 th {
@@ -112,6 +112,7 @@ input, input[type="file"i] {
   border: 2px dotted #CDCDCD;
   min-width: 930px;
   min-height: 700px;
+  /* background: lightskyblue; */
 }
 
 .name-title-image {
@@ -127,9 +128,9 @@ input, input[type="file"i] {
 }
 
 .name-title-image:hover {
-  font-size: 42px;
-  transition-property: font-size;
-  transition-duration: 0.4s;
+  transform: scale(1.2);
+  transition-property: transform;
+  transition-duration: 0.5s;
 }
 
 .center {
@@ -147,24 +148,31 @@ input, input[type="file"i] {
   /* border: 1px solid red; */
   min-width: 250px;
   min-height: 250px;
-  margin: 5px;
+  /* margin: 5px; */
+  height: 100%;
+
+  /* background: red; */
 }
 
 .container-chanpion {
   width: 500px;
-  height: 500px;
+  height: 100%;
   /* border: 1px solid blue; */
 }
 
 .container-vice {
   width: 500px;
-  height: 500px;
+  height: 100%;
   /* border: 1px solid orange; */
+}
+
+.team-name-margin-top {
+  margin-top: 44px;
 }
 
 .title-anim {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 900;
   text-align: center;
   font-family: system-ui;
   text-transform: uppercase;
@@ -193,9 +201,10 @@ input, input[type="file"i] {
 .space-container-anima {}
 
 .td-select-image {
-  padding: 15px;
+  padding: 0 15px;
   height: 100%;
-  margin-top: 10px;
+  min-width: 250px;
+  min-height: 250px;
 }
 
 .label-select-image {
@@ -243,7 +252,19 @@ input, input[type="file"i] {
 
 .container-btn-test-animations {
   margin-top: 150px;
-  ;
+}
+
+.container-center-pencil-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pencil-icon {
+  font-size:24px
+}
+
+.input-edit-pencil{
+  cursor: text;
 }
 
 /* ----------------------------------------------
