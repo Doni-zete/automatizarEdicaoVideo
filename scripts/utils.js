@@ -19,6 +19,7 @@ const getImage = (value, id) => {
       elementImg['img'].src = URL.createObjectURL(file);
       elementImg['img'].height = '250';
       elementImg['img'].width = '250';
+      elementImg['img'].style = "";
 
       // Change the background color to identify which field still not have a image. 
       elementImg['title'].parentElement.classList.add('with-img');
@@ -45,7 +46,7 @@ const generateTag = (value, tag, id = '') => {
   }
 
   if (tag === 'img') {
-    return `<img id='id-${value}' src='#''>`;
+    return `<img id='id-${value}' src='imgs/imagnotfound.png' style="display:block;width: 26px; height: 26px;">`;
   }
 
   if (tag === 'label') {
@@ -187,6 +188,10 @@ const createFirstTable = () => {
     const newAreaTxt = areaTxt.value.replace('<table', '<table id="table-first" ');
     const containerFirstTable = document.getElementById('container-first-table');
     containerFirstTable.innerHTML = newAreaTxt;
+    
+    // Used to show the button to reverse the rows when there is a table
+    const showReverseButton = document.getElementById('reverse-rows-table-first-id-btn');
+    showReverseButton.style.display = "inline-flex";
 
     insertCheckbox();
   }
@@ -418,10 +423,10 @@ const hideFirstTable = () => {
   const btn = document.getElementById('hide-table-first-id-btn');
   if (tblFirst.style.display === 'none') {
     tblFirst.style.display = 'block';
-    btn.innerHTML = "Esconder Tabela Original";
+    btn.innerHTML = "Hide Original Table";
   } else {
     tblFirst.style.display = 'none';
-    btn.innerHTML = "Mostrar Tabela Original";
+    btn.innerHTML = "Show Original Table";
   }
   console.log(tblFirst.style.display)
 };
@@ -482,3 +487,18 @@ const handleConfirmChangeAllTitlesText = (inputField, selectTitleEdit, isToChang
     }
   }
 };
+
+const reverRowsTable = () => {
+  const t = document.getElementById("table-first");
+
+  const tb = t.querySelector('tbody');
+  const tr = tb.getElementsByTagName('tr');
+  const atr = [];
+  for (i = 0; i < tr.length; i++) {
+    atr.push(`<tr>${tr[i].innerHTML}</tr>`);
+  }
+
+  const reveratr = atr.reverse();
+
+  tb.innerHTML = reveratr.join(" ");
+}

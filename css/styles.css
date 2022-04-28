@@ -33,13 +33,13 @@ table {
 .text-seleciona-image-span {
   font-size: 16px;
   transition-property: font-size;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
 .text-seleciona-image-span:hover {
   font-size: 24px;
   transition-property: font-size;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 th {
@@ -130,7 +130,7 @@ input, input[type="file"i] {
 .name-title-image:hover {
   font-size: 42px;
   transition-property: font-size;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 .center {

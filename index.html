@@ -27,7 +27,9 @@
     <div class="separete-buttons">
       <button class="btn-sel-col" onclick="selectColumn()">Select Columns</button>
       <button id="hide-table-first-id-btn" class="btn-sel-col" style="display: none;"
-        onclick="hideFirstTable()">Esconder Tabela Original</button>
+        onclick="hideFirstTable()">Hide Original Table</button>
+      <button id="reverse-rows-table-first-id-btn" class="btn-sel-col" style="display: none;"
+        onclick="reverRowsTable()">Reverse Rows Table</button>
       <!-- <button class="btn-sel-col" onclick="document.location.reload(true);">Reload Page</button> -->
     </div>
 
@@ -36,26 +38,7 @@
       <section class="section-con">
 
         <div id="container-first-table">
-          <textarea name="" id="txtarea-first-table" cols="70" rows="18"><table>
-            <thead>
-              <tr>
-                <th>Campeão</th>
-                <th>Vice</th>
-              </tr>
-            </thead>
-            <tr>
-              <td>TEXT here</td>
-              <td>Second Text</td>
-            </tr>
-            <tr>
-              <td>C</td>
-              <td>TEXT here</td>
-            </tr>
-            <tr>
-              <td>E</td>
-              <td>Second Text</td>
-            </tr>
-          </table></textarea>
+          <textarea name="" id="txtarea-first-table" cols="70" rows="18"></textarea>
           <div>
             <button class="btn-sel-col" onclick="createFirstTable()">Create Table</button>
           </div>
