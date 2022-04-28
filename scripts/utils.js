@@ -179,6 +179,10 @@ const createFirstTable = () => {
     const newAreaTxt = areaTxt.value.replace('<table', '<table id="table-first" ');
     const containerFirstTable = document.getElementById('container-first-table');
     containerFirstTable.innerHTML = newAreaTxt;
+    
+    // Used to show the button to reverse the rows when there is a table
+    const showReverseButton = document.getElementById('reverse-rows-table-first-id-btn');
+    showReverseButton.style.display = "inline-flex";
 
     insertCheckbox();
   }
