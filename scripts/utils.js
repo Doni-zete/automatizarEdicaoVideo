@@ -421,3 +421,18 @@ const hideFirstTable = () => {
   }
   console.log(tblFirst.style.display)
 };
+
+const reverRowsTable = () => {
+  const t = document.getElementById("table-first");
+
+  const tb = t.querySelector('tbody');
+  const tr = tb.getElementsByTagName('tr');
+  const atr = [];
+  for (i = 0; i < tr.length; i++) {
+    atr.push(`<tr>${tr[i].innerHTML}</tr>`);
+  }
+
+  const reveratr = atr.reverse();
+
+  tb.innerHTML = reveratr.join(" ");
+}
