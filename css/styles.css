@@ -128,8 +128,8 @@ input, input[type="file"i] {
 }
 
 .name-title-image:hover {
-  font-size: 42px;
-  transition-property: font-size;
+  transform: scale(1.2);
+  transition-property: transform;
   transition-duration: 0.5s;
 }
 
@@ -201,9 +201,10 @@ input, input[type="file"i] {
 .space-container-anima {}
 
 .td-select-image {
-  padding: 15px;
+  padding: 0 15px;
   height: 100%;
-  margin-top: 10px;
+  min-width: 250px;
+  min-height: 250px;
 }
 
 .label-select-image {
