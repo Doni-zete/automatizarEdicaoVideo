@@ -5,22 +5,23 @@ let idBtenShowHide = null;
 const getImage = (value, id) => {
   console.log(value, id);
   if (value.files && value.files.length > 0) {
-
     // Everytime a new image is selected it will read all the images again
     const allImagesToUpdate = getImagesToUpdateImage();
 
-    console.log(value.files);
+    console.log(value);
     const [file] = value.files;
     const imgToInsert = document.getElementById(id);
 
     const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
 
-    imgToInsert.src = URL.createObjectURL(file);
+    const imagePath = `/imgs/path/${file.name}`;
+
+    imgToInsert.src = imagePath;
 
     const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
 
     allImagesToUpdate[titleTxt].forEach(elementImg => {
-      elementImg['img'].src = URL.createObjectURL(file);
+      elementImg['img'].src = `/imgs/path/${file.name}`;
       elementImg['img'].height = '250';
       elementImg['img'].width = '250';
       elementImg['img'].removeAttribute("style");
@@ -174,18 +175,25 @@ const insertCheckbox = () => {
 
 const selectColumn = () => {
   const trch = document.getElementById('id-row-checkbox');
-  const thtr = trch.getElementsByTagName('th');
-  const selectedCheckbox = [];
+  if (trch) {
+    const thtr = trch.getElementsByTagName('th');
+    const selectedCheckbox = [];
 
-  for (let i = 0; i < thtr.length; i++) {
-    const inth = thtr[i].getElementsByTagName('input');
+    for (let i = 0; i < thtr.length; i++) {
+      const inth = thtr[i].getElementsByTagName('input');
 
-    if (inth[0] && inth[0].checked) {
-      selectedCheckbox.push(i);
+      if (inth[0] && inth[0].checked) {
+        selectedCheckbox.push(i);
+      }
+
     }
+    createTableSecond(selectedCheckbox);
 
+    // Used to show the button to save or load a table
+    const saveTableButton = document.getElementById('save-table-id-btn');
+
+    saveTableButton.style.display = "inline-flex";
   }
-  createTableSecond(selectedCheckbox);
 }
 
 
@@ -202,6 +210,7 @@ const createFirstTable = () => {
 
     // Used to show the button to reverse the rows when there is a table
     const showReverseButton = document.getElementById('reverse-rows-table-first-id-btn');
+
     showReverseButton.style.display = "inline-flex";
 
     insertCheckbox();
@@ -512,8 +521,68 @@ const reverRowsTable = () => {
 
 const confirmWithEnter = (keypressed, element) => {
   console.log(keypressed, element);
-    if (keypressed.key === "Enter") {
-      console.log("Enter Pressed!");
-      element.parentElement.querySelector("button").click();
-    }
+  if (keypressed.key === "Enter") {
+    console.log("Enter Pressed!");
+    element.parentElement.querySelector("button").click();
+  }
 };
+
+const handleShowHideMessage = (message = "", error = false) => {
+  const messageId = document.getElementById('messages-id');
+
+  let showSuccess = `<span class='success-message'>${message}</span>`;
+
+  if (error) {
+    showSuccess = `<span class='error-message'>${message}</span>`;
+  }
+
+
+  messageId.innerHTML = showSuccess;
+  setTimeout(() => {
+    messageId.innerHTML = "";
+  }, 1100);
+}
+
+const saveTableToLocalStorage = () => {
+  const tableSecond = document.getElementById('table-second');
+
+  if (tableSecond) {
+    const textTableSecond = tableSecond.innerHTML;
+    localStorage.setItem("TableSecond", textTableSecond);
+
+    const textToShow = "Salvo com sucesso!";
+    handleShowHideMessage(textToShow);
+  } else {
+    console.log("'table-second' Not Found");
+  }
+};
+
+const loadTableFromLocalStorage = () => {
+  const tableSecond = document.getElementById('table-second');
+
+  if (tableSecond) {
+    const textTableSecond = localStorage.getItem("TableSecond");
+    if (textTableSecond) {
+      tableSecond.innerHTML = textTableSecond;
+
+      const textToShow = "Carregado com sucesso!";
+      handleShowHideMessage(textToShow);
+
+      const containerFirstTable = document.getElementById('container-first-table');
+      containerFirstTable.innerHTML = "";
+
+      // Used to show the button to save or load a table
+      const saveTableButton = document.getElementById('save-table-id-btn');
+
+      saveTableButton.style.display = "inline-flex";
+    } else {
+      console.log("TableSecond not Found in localstorage")
+    }
+  } else {
+    console.log("'table-second' Not Found");
+  }
+};
+
+const goToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
