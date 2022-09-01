@@ -5,22 +5,24 @@ let idBtenShowHide = null;
 const getImage = (value, id) => {
   console.log(value, id);
   if (value.files && value.files.length > 0) {
-
+debugger
     // Everytime a new image is selected it will read all the images again
     const allImagesToUpdate = getImagesToUpdateImage();
 
-    console.log(value.files);
+    console.log(value);
     const [file] = value.files;
     const imgToInsert = document.getElementById(id);
 
     const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
 
-    imgToInsert.src = URL.createObjectURL(file);
+    const imagePath = `/imgs/path/${file.name}`;
+
+    imgToInsert.src = imagePath;
 
     const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
 
     allImagesToUpdate[titleTxt].forEach(elementImg => {
-      elementImg['img'].src = URL.createObjectURL(file);
+      elementImg['img'].src = `/imgs/path/${file.name}`;
       elementImg['img'].height = '250';
       elementImg['img'].width = '250';
       elementImg['img'].removeAttribute("style");
@@ -186,6 +188,11 @@ const selectColumn = () => {
 
   }
   createTableSecond(selectedCheckbox);
+
+  // Used to show the button to save or load a table
+  const saveTableButton = document.getElementById('save-table-id-btn');
+
+  saveTableButton.style.display = "inline-flex";
 }
 
 
@@ -202,6 +209,7 @@ const createFirstTable = () => {
 
     // Used to show the button to reverse the rows when there is a table
     const showReverseButton = document.getElementById('reverse-rows-table-first-id-btn');
+
     showReverseButton.style.display = "inline-flex";
 
     insertCheckbox();
@@ -512,8 +520,36 @@ const reverRowsTable = () => {
 
 const confirmWithEnter = (keypressed, element) => {
   console.log(keypressed, element);
-    if (keypressed.key === "Enter") {
-      console.log("Enter Pressed!");
-      element.parentElement.querySelector("button").click();
+  if (keypressed.key === "Enter") {
+    console.log("Enter Pressed!");
+    element.parentElement.querySelector("button").click();
+  }
+};
+
+const saveTableToLocalStorage = () => {
+  const tableSecond = document.getElementById('table-second');
+
+  if (tableSecond) {
+    const textTableSecond = tableSecond.innerHTML;
+    localStorage.setItem("TableSecond", textTableSecond);
+    console.log(textTableSecond);
+  } else {
+    console.log("'table-second' Not Found");
+  }
+};
+
+const loadTableFromLocalStorage = () => {
+  const tableSecond = document.getElementById('table-second');
+
+  if (tableSecond) {
+    const textTableSecond = localStorage.getItem("TableSecond");
+    if (textTableSecond) {
+      tableSecond.innerHTML = textTableSecond;
+      console.log(textTableSecond);
+    } else {
+      console.log("TableSecond not Found in localstorage")
     }
+  } else {
+    console.log("'table-second' Not Found");
+  }
 };

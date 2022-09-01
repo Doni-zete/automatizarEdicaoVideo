@@ -75,7 +75,7 @@ th {
   padding: 12px;
   margin-bottom: 10px;
   cursor: pointer;
-  background: #90d9e5;
+  background-color: #90d9e5;
   color: #FFFFEA;
   font-weight: 600;
   border: 2px solid #CDCDCD;
@@ -83,7 +83,8 @@ th {
 }
 
 .btn-sel-col:hover {
-  padding: 12px 14px
+  padding: 12px 14px;
+  background-color: #82e4f3;
 }
 
 .inp-chck {
@@ -260,11 +261,19 @@ input, input[type="file"i] {
 }
 
 .pencil-icon {
-  font-size:24px
+  font-size: 24px
 }
 
-.input-edit-pencil{
+.input-edit-pencil {
   cursor: text;
+}
+
+.save-button {
+  background-color: #73f579;
+}
+
+.save-button:hover {
+  background-color: #6bfd72;
 }
 
 /* ----------------------------------------------
