@@ -93,6 +93,7 @@ th {
 
 .sup-container {
   padding: 10px;
+  position: relative;
 }
 
 input, input[type="file"i] {
@@ -274,6 +275,48 @@ input, input[type="file"i] {
 
 .save-button:hover {
   background-color: #6bfd72;
+}
+
+.messages-container {
+  display: flex;
+  min-height: 20px;
+  justify-content: center;
+}
+
+.success-message {
+  color: #68D391;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #E53E3E;
+  font-weight: bold;
+}
+
+.go-to-up-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: rgb(85, 85, 170);
+  border-radius: 50%;
+  opacity: 0;
+  height: 60px;
+  width: 60px;
+  background-color: #90d9e5;
+  color: #FFFFEA;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.go-to-up-position:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #82e4f3;
+  font-weight: bold;
 }
 
 /* ----------------------------------------------
