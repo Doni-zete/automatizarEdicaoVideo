@@ -14,14 +14,14 @@ const getImage = (value, id) => {
 
     const textSelecionaImg = document.getElementById(`text-select-img-${id}`);
 
-    const imagePath = `/imgs/path/${file.name}`;
+    const imagePath = `/imgs/paths/${file.name}`;
 
     imgToInsert.src = imagePath;
 
     const titleTxt = textSelecionaImg.parentElement.parentElement.querySelector('.name-title-image').innerText;
 
     allImagesToUpdate[titleTxt].forEach(elementImg => {
-      elementImg['img'].src = `/imgs/path/${file.name}`;
+      elementImg['img'].src = imagePath;
       elementImg['img'].height = '250';
       elementImg['img'].width = '250';
       elementImg['img'].removeAttribute("style");
@@ -585,4 +585,8 @@ const loadTableFromLocalStorage = () => {
 
 const goToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const goToBottom = () => {
+  window.scrollTo(0, document.body.scrollHeight);
 }

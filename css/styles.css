@@ -300,7 +300,7 @@ input, input[type="file"i] {
   z-index: 10;
   position: fixed;
   right: 10px;
-  bottom: 20px;
+  bottom: 80px;
   background: rgb(85, 85, 170);
   border-radius: 50%;
   opacity: 0;
@@ -312,7 +312,37 @@ input, input[type="file"i] {
   transition: 0.4s;
 }
 
+
 .go-to-up-position:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #82e4f3;
+  font-weight: bold;
+}
+
+
+.go-to-down-position{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background: rgb(85, 85, 170);
+  border-radius: 50%;
+  opacity: 0;
+  height: 60px;
+  width: 60px;
+  background-color: #90d9e5;
+  color: #FFFFEA;
+  font-size: 16px;
+  transition: 0.4s;
+
+}
+
+
+.go-to-down-position:hover{
   opacity: 1;
   cursor: pointer;
   background-color: #82e4f3;
@@ -419,3 +449,4 @@ input, input[type="file"i] {
     transform: scale3d(1, 1, 1);
   } */
 }
+
